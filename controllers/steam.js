@@ -9,11 +9,9 @@ const getUser = async (req, res = response) => {
     const { keyword } = req.params;
 
     try {
-      const data =  steam.getUserSummary(keyword).then(summary => {
-            return summary;
-
+      steam.getUserSummary(keyword).then(summary => {
+          res.json(summary);
         });
-        res.json(data);
     } catch (err) {
         console.error(err);
     }
