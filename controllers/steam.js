@@ -17,6 +17,19 @@ const getUser = async (req, res = response) => {
     }
 };
 
+const getFriends = async (req, res = response) => {
+    const { keyword } = req.params;
+
+    try {
+        steam.getUserFriends(keyword).then(summary => {
+            res.json(summary);
+        });
+    } catch (err) {
+        console.error(err);
+    }
+}
+
 module.exports = {
     getUser,
+    getFriends
 };
