@@ -7,7 +7,7 @@ const getUser = async (req, res = response) => {
 
     try {
         const resp = await fetch(
-            `${AIC_URL}ISteamUser/GetPlayerSummaries/v0002/?key=0EFAA7838348709DF0247F408F1B5FC8&steamids=${keyword}`,
+            `${AIC_URL}ISteamUser/GetPlayerSummaries/v0002/?key=674F3A679E3FD2346AB87AE3CC2DF4D1&steamids=${keyword}`,
             {
                 method: "GET",
                 headers: {
